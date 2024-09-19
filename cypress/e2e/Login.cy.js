@@ -14,6 +14,8 @@ describe("Login", () => {
     cy.contains("User Portal");
     cy.contains("Logged in as admin");
 
+    cy.percySnapshot("Admin login");
+
     cy.contains("button", "Logout").click();
 
     cy.contains("User Portal").should("not.exist");
