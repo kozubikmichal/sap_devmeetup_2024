@@ -16,7 +16,7 @@ describe("Login", () => {
 
     cy.contains("button", "Logout").click();
 
-    cy.contains("User Portal").should("not.exist");
+    cy.contains("User Area").should("not.exist");
     cy.contains("Login");
   });
 });

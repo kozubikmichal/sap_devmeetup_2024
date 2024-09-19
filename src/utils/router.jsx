@@ -1,6 +1,7 @@
 import { createBrowserRouter } from "react-router-dom";
 import LoginPage from "../pages/Login";
 import UserPortal from "../pages/UserPortal";
+import Protected from "../components/Protected";
 
 export const ROUTES = {
   Login: "/",
@@ -15,7 +16,11 @@ export const createRouter = () => {
     },
     {
       path: ROUTES.UserPortal,
-      element: <UserPortal />,
+      element: (
+        <Protected>
+          <UserPortal />
+        </Protected>
+      ),
     },
   ]);
 };
