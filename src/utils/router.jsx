@@ -4,7 +4,7 @@ import UserPortal from "../pages/UserPortal";
 
 export const ROUTES = {
   Login: "/",
-  Protected: "/protected",
+  UserPortal: "/protected",
 };
 
 export const createRouter = () => {
@@ -14,7 +14,7 @@ export const createRouter = () => {
       element: <LoginPage />,
     },
     {
-      path: ROUTES.Protected,
+      path: ROUTES.UserPortal,
       element: <UserPortal />,
     },
   ]);

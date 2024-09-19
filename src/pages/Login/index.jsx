@@ -19,7 +19,7 @@ const LoginPage = () => {
     } else {
       setError(null);
       login(username);
-      navigate(ROUTES.Protected);
+      navigate(ROUTES.UserPortal);
     }
   };
 
