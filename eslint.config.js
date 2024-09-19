@@ -4,6 +4,7 @@ import react from "eslint-plugin-react";
 import reactHooks from "eslint-plugin-react-hooks";
 import reactRefresh from "eslint-plugin-react-refresh";
 import jest from "eslint-plugin-jest";
+import cypress from "eslint-plugin-cypress";
 
 export default [
   { ignores: ["dist"] },
@@ -24,6 +25,7 @@ export default [
       "react-hooks": reactHooks,
       "react-refresh": reactRefresh,
       jest,
+      cypress,
     },
     rules: {
       ...js.configs.recommended.rules,
