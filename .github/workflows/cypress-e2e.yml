@@ -19,7 +19,9 @@ jobs:
           start: npm run dev
           browser: chrome
           record: true
+          command-prefix: 'percy exec -- npx'
         env:
           # pass GitHub token to detect new build vs re-run build
           GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
           CYPRESS_RECORD_KEY: ${{secrets.CYPRESS_RECORD_KEY}}
+          PERCY_TOKEN: ${{secrets.PERCY_TOKEN}}
