@@ -15,8 +15,8 @@ const ProtectedPage = () => {
 
   return (
     <div className="Page">
-      <div>User Area</div>
-      <div>Logged as {user}</div>
+      <div>User Portal</div>
+      <div>Logged in as {user}</div>
       <button type="button" onClick={onLogout}>
         Logout
       </button>
