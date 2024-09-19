@@ -1,8 +1,9 @@
 import { render, screen } from "@testing-library/react";
-import LoginForm from "./LoginForm";
 import userEvent from "@testing-library/user-event";
 
-describe("pages/Login/LoginForm.test.jsx", () => {
+import LoginForm from "./LoginForm";
+
+describe("components/LoginForm", () => {
   it("should render the form and submit it", async () => {
     const onSubmit = jest.fn();
 

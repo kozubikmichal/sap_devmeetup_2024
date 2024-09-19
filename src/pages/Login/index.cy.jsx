@@ -4,7 +4,7 @@ import { createMemoryRouter, RouterProvider } from "react-router-dom";
 import LoginPage from "./";
 import { ROUTES } from "../../utils/router";
 
-describe("<LoginForm />", () => {
+describe("pages/Login", () => {
   const setup = () =>
     cy.mount(
       <RouterProvider

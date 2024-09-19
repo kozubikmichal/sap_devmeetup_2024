@@ -3,7 +3,7 @@ import { ROUTES } from "../../utils/router";
 import useActiveUser from "../../hooks/useActiveUser";
 
 import { verify } from "../../utils/user";
-import LoginForm from "./LoginForm";
+import LoginForm from "./components/LoginForm";
 
 import "./styles.css";
 import { useState } from "react";

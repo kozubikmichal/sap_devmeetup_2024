@@ -2,7 +2,7 @@
 
 import LoginForm from "./LoginForm";
 
-describe("<LoginForm />", () => {
+describe("components/LoginForm", () => {
   it("renders", () => {
     const onSubmit = cy.stub().as("onSubmit");
 
