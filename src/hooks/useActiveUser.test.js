@@ -23,6 +23,7 @@ describe("hooks/useActiveUser", () => {
     const { user } = renderHook(() => useActiveUser(storage));
 
     expect(user).toBeFalsy();
+    expect(storage.getItem("activeUser")).toBeFalsy();
   });
 
   it("should return the user after login", () => {
@@ -33,6 +34,7 @@ describe("hooks/useActiveUser", () => {
     });
 
     expect(result.current.user).toBe("user");
+    expect(storage.getItem("activeUser")).toBe("user");
   });
 
   it("should return no user after logout", () => {
@@ -47,5 +49,6 @@ describe("hooks/useActiveUser", () => {
     });
 
     expect(result.current.user).toBeFalsy();
+    expect(storage.getItem("activeUser")).toBeFalsy();
   });
 });

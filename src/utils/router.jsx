@@ -1,10 +1,11 @@
 import { createBrowserRouter } from "react-router-dom";
 import LoginPage from "../pages/Login";
 import UserPortal from "../pages/UserPortal";
+import Protected from "../components/Protected";
 
 export const ROUTES = {
   Login: "/",
-  Protected: "/protected",
+  UserPortal: "/protected",
 };
 
 export const createRouter = () => {
@@ -14,8 +15,12 @@ export const createRouter = () => {
       element: <LoginPage />,
     },
     {
-      path: ROUTES.Protected,
-      element: <UserPortal />,
+      path: ROUTES.UserPortal,
+      element: (
+        <Protected>
+          <UserPortal />
+        </Protected>
+      ),
     },
   ]);
 };
