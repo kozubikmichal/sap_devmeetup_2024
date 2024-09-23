@@ -12,7 +12,6 @@ const useActiveUser = (storage = localStorage) => {
       setUser(username);
     },
     logout: () => {
-      storage.removeItem(STORAGE_KEY);
       setUser(null);
     },
   };

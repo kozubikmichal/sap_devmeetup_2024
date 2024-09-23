@@ -5,9 +5,9 @@ name: Jest Tests
 
 on:
   push:
-    branches: [ "main" ]
+    branches: [ "main", "final" ]
   pull_request:
-    branches: [ "main" ]
+    branches: [ "main", "final" ]
 
 jobs:
   build:
