@@ -11,7 +11,7 @@ describe("components/LoginForm", () => {
     cy.get("input[name='username']").type("Sonic the Hedgehog");
     cy.get("input[name='password']").type("Chili Dogs");
 
-    cy.contains("button", "Login").click();
+    cy.contains("button", "Sign in").click();
 
     cy.get("@onSubmit").should("have.been.calledWith", {
       username: "Sonic the Hedgehog",
