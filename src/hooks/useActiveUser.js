@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-const STORAGE_KEY = "activeUser";
+export const STORAGE_KEY = "activeUser";
 
 const useActiveUser = (storage = localStorage) => {
   const [user, setUser] = useState(storage.getItem(STORAGE_KEY));
@@ -12,6 +12,7 @@ const useActiveUser = (storage = localStorage) => {
       setUser(username);
     },
     logout: () => {
+      storage.removeItem(STORAGE_KEY);
       setUser(null);
     },
   };
