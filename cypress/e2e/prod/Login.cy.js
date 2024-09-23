@@ -11,12 +11,12 @@ describe("Login", () => {
 
     cy.contains("button", "Login").click();
 
-    cy.contains("User Area");
-    cy.contains("Logged as admin");
+    cy.contains("User Portal");
+    cy.contains("Logged in as admin");
 
     cy.contains("button", "Logout").click();
 
-    cy.contains("User Area").should("not.exist");
+    cy.contains("User Portal").should("not.exist");
     cy.contains("Login");
   });
 });
